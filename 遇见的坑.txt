@@ -1,0 +1,14 @@
+1.echart引入报错
+ 由于最新版本问题
+解决办法
+第一 webpack.dev.conf.js 中plugins: 加入__DEV__: false
+第二 用cnpm装
+
+2严格模式取消
+
+webpack.base.conf.js 
+rules eslint-loader注释
+
+3文件名别名
+webpack.base.conf.js
+resolve  alias
