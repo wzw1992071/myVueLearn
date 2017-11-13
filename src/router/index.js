@@ -10,6 +10,7 @@ Vue.use(Router)
 const Hello = resolve => require(['src/components/Get.vue'], resolve)
 const Demo = resolve => require(['src/components/newInput.vue'], resolve)
 const Get = resolve => require(['src/components/Get.vue'], resolve)
+const Swiper = resolve => require(['src/components/SwiperDemo.vue'], resolve)
 export default new Router({
   routes: [
     // 首页进去可以重定位
@@ -29,8 +30,13 @@ export default new Router({
     },
     {
       path: '/',
-      name: 'Demo',
+      name: 'demo',
       component: Demo
+    },
+    {
+      path: '/swiper',
+      name: 'SwiperDemo',
+      component: Swiper
     }
   ]
 })

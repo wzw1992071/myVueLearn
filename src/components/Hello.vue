@@ -16,7 +16,7 @@
 <script>
 import { mapState,mapMutations } from 'vuex';
 export default {
-  name: 'hello',
+  name: 'Hello',
   data () {
     return{}
     
