@@ -2,10 +2,10 @@
   <div class="get">
     <div>这是get组件</div>
     <ul>
-     <li v-for="msg in childMsg">
+     <li v-for="(msg,index) in childMsg" :key="index">
         {{ msg }}
       </li>
-      <li v-for="info in indexInfos">
+      <li v-for="(info,index) in indexInfos" :key="index">
         {{ info }}
       </li>
     </ul>

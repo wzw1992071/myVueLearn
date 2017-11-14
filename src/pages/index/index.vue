@@ -24,11 +24,7 @@ export default {
      
   },
   mounted(){
-    var options={
-        center:new beyond.geometry.MapPoint(121, 30.8),
-        zoom:10
-    }
-    var cmap=new beyond.maps.Map("mapContainer",options,function(){});
+    console.log($)
   }
   
   
