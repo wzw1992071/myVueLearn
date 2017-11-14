@@ -1,7 +1,6 @@
 <template>
   <div class="indexPage">
-    <div>{{info}}</div>
-    <lists :child-msg="msg"></lists>
+    <div id="mapContainerDemo"></div>
   </div>
 </template>
 
@@ -11,16 +10,25 @@ export default {
   name: 'indexPage',
   data () {
     return {
-        info:"这是首页",
-        msg:[1,2,3]
+     
 
     }
   },
   props: {
-      childMsg: ['childMsg'] //这样可以指定传入的类型，如果类型不对，会警告
+    
   },
   components:{
-    'lists': Get
+   
+  },
+  methods: {
+     
+  },
+  mounted(){
+    var options={
+        center:new beyond.geometry.MapPoint(121, 30.8),
+        zoom:10
+    }
+    var cmap=new beyond.maps.Map("mapContainer",options,function(){});
   }
   
   
@@ -31,5 +39,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+ #mapContainerDemo{
+   width: 100%; 
+   height: 100%; 
+   position: relative;
+ }
 </style>

@@ -5,6 +5,9 @@
      <li v-for="msg in childMsg">
         {{ msg }}
       </li>
+      <li v-for="info in indexInfos">
+        {{ info }}
+      </li>
     </ul>
   </div>
 </template>
@@ -18,7 +21,7 @@ export default {
      
     }
   },
-  props: ['childMsg']
+  props: ['childMsg',"indexInfos"]
   
  
 }

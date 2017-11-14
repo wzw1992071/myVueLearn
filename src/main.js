@@ -6,6 +6,10 @@ import router from './router'
 import store from "src/vuex/store"
 import axios from "src/api/http"
 
+
+//初始化css样式
+import "normalize.css"
+
 // 引入饿了么UI组件库
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'

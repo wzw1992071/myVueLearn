@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import   '../../static/plugin//swiper/css/swiper.min.css'
-import   '../../static/plugin//swiper/js/swiper.min.js'
+import   '../../static/plugin/swiper/css/swiper.min.css'
+import   '../../static/plugin/swiper/js/swiper.min.js'
 export default {
   name: 'SwiperDemo',
   
