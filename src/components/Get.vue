@@ -1,14 +1,14 @@
 <template>
   <div class="get">
-    <div>这是get组件</div>
-    <ul>
-     <li v-for="(msg,index) in childMsg" :key="index">
-        {{ msg }}
-      </li>
-      <li v-for="(info,index) in indexInfos" :key="index">
-        {{ info }}
-      </li>
-    </ul>
+    <header>
+      <slot name="header"></slot>
+    </header>
+    <main>
+      <slot name="content"></slot>
+    </main>
+    <footer>
+      <slot name="footer"></slot>
+    </footer>
   </div>
 </template>
 
@@ -21,7 +21,7 @@ export default {
      
     }
   },
-  props: ['childMsg',"indexInfos"]
+  props: []
   
  
 }
