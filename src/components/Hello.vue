@@ -5,32 +5,38 @@
     <h1>{{count}}</h1>
     <h2></h2>
     <div>
-        <button @click="addCount">+</button>
-        <button @click="reduceCount">-</button>
-        <button @click="getData">请求</button>
+        <!--<button @click="addCount">+</button>
+        <button @click="reduceCount">-</button>-->
+        <input type="text" v-model="number" >
+        <button @click="changeStatus">请求</button>
     </div>
     
   </div>
 </template>
 
 <script>
-import { mapState,mapMutations } from 'vuex';
+import { mapState,mapMutations,mapActions } from 'vuex';
 export default {
   name: 'Hello',
   data () {
-    return{}
+    return{
+      number:0
+    }
     
   },
   computed:{
     ...mapState('index', {
         count: state => state.count,
-     
+        
     })
   },
   methods:{
     ...mapMutations('index',[
         'addCount',
         'reduceCount'
+    ]),
+    ...mapActions('index',[
+       "changeStatus"
     ]),
     getData(){
       this.$axios({

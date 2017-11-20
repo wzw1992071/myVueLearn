@@ -1,3 +1,7 @@
-export default {
 
+
+export default {
+    changeStatus(){
+        console.log(1)
+    }
 }

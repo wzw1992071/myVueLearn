@@ -23,6 +23,7 @@ const moduleIndex={
    state:{
     count:2
   },
+  actions:indexAction,
   mutations:indexMutations,
   getters:getters
 }
