@@ -1,11 +1,12 @@
 <template>
   <div class="indexPage" >
+      <div class="header"></div>
      <div id="mapContainer"></div>
+     
   </div>
 </template>
 
 <script>
-
 export default {
   name: 'indexPage',
   components:{
@@ -40,10 +41,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 .indexPage{
-  height: 100%; 
+  height: 100%;
+  .header{
+    height:12%; 
+  }
   #mapContainer{
    width:100%; 
-   height:100%; 
+   height:88%; 
    position:relative;
  }
 }
