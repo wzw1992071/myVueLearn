@@ -30,7 +30,8 @@ import axios from 'axios'
 //     // })
 // }
 axios.defaults.timeout=5000;
-axios.defaults.baseURL = 'http://api.exmple.com';
+// axios.defaults.baseURL = 'http://api.exmple.com';
+axios.defaults.baseURL = 'http://192.168.0.101:3000/';
 
 
 
@@ -47,7 +48,7 @@ axios.interceptors.request.use(function(config){
     Message.error({
         message:"请求超时"
     })
-  return Promise.reject(error);
+  return Promise.reject(err);
 });
 //添加一个响应拦截器
 axios.interceptors.response.use(function(res){
@@ -61,7 +62,7 @@ axios.interceptors.response.use(function(res){
     Message.error({
         message:"请求失败"
     })
-  return Promise.reject(error);
+  return Promise.reject(err);
 })
 
 export default axios

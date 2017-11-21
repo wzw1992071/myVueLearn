@@ -8,7 +8,7 @@
         <!--<button @click="addCount">+</button>
         <button @click="reduceCount">-</button>-->
         <input type="text" v-model="number" >
-        <button @click="changeStatus">请求</button>
+        <button @click="changeStatus(number)">请求</button>
     </div>
     
   </div>
@@ -26,8 +26,7 @@ export default {
   },
   computed:{
     ...mapState('index', {
-        count: state => state.count,
-        
+        count: state => state.count
     })
   },
   methods:{
